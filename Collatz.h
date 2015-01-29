@@ -39,6 +39,17 @@ pair<int, int> collatz_read (const string& s);
  */
 int collatz_eval (int i, int j);
 
+// ------------
+// collatz
+// ------------
+
+/**
+ * @param x the number you desired to get the collatz of
+ * @return the cycle of the input interger
+ */
+
+// int collatz (int x);
+
 // -------------
 // collatz_print
 // -------------
