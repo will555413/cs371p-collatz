@@ -34,16 +34,41 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-    // <your code>
-    // int start = i, highest = 0;
-    // for(; start<j; start++)
-    // {
-    //     int iter = collatz(start);
-    //     if(highest<iter)
-    //         highest = iter;
-    // }
-    // return highest;
-    return 1;
+    // assert: input validity check
+    assert (i>0 && i<1000000);
+    assert (j>0 && j<1000000);
+
+    int highest = 0, start, end;
+    if(i<j)
+    {
+        start = i;
+        end = j;
+    }
+    else
+    {
+        start = j;
+        end = i;
+    }
+    
+    for(; start<end; start++)
+    {
+        // int iter = collatz(start);
+        int temp = start, cycle = 1;
+        while(temp!=1)
+        {
+            if(temp % 2 == 1)
+                temp = (temp*3+1);
+            else
+                temp = temp/2;
+            cycle++;
+        }
+        if(highest<cycle)
+            highest = cycle;
+    }
+    // assert: output validity check
+    assert (highest>0);
+    return highest;
+    // return 1;
 }
 
 // ------------

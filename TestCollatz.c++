@@ -41,28 +41,43 @@ TEST(Collatz, read) {
 
 TEST(Collatz, eval_1) {
     const int v = collatz_eval(1, 10);
-    ASSERT_EQ(1, v);}
+    ASSERT_EQ(20, v);}
 
 TEST(Collatz, eval_2) {
     const int v = collatz_eval(100, 200);
-    ASSERT_EQ(1, v);}
+    ASSERT_EQ(125, v);}
 
 TEST(Collatz, eval_3) {
     const int v = collatz_eval(201, 210);
-    ASSERT_EQ(1, v);}
+    ASSERT_EQ(89, v);}
 
 TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
-    ASSERT_EQ(1, v);}
+    ASSERT_EQ(174, v);}
 
 // -----
 // print
 // -----
 
-TEST(Collatz, print) {
+TEST(Collatz, print1) {
     ostringstream w;
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
+
+TEST(Collatz, print2) {
+    ostringstream w;
+    collatz_print(w, 100, 200, 125);
+    ASSERT_EQ("100 200 125\n", w.str());}
+
+TEST(Collatz, print3) {
+    ostringstream w;
+    collatz_print(w, 201, 210, 89);
+    ASSERT_EQ("201 210 89\n", w.str());}
+
+TEST(Collatz, print4) {
+    ostringstream w;
+    collatz_print(w, 900, 1000, 174);
+    ASSERT_EQ("900 1000 174\n", w.str());}
 
 // -----
 // solve
