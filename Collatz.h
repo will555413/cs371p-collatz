@@ -40,15 +40,27 @@ pair<int, int> collatz_read (const string& s);
 int collatz_eval (int i, int j);
 
 // ------------
-// collatz
+// collatz_iter
 // ------------
 
 /**
  * @param x the number you desired to get the collatz of
- * @return the cycle of the input interger
+ * @return the cycle of the input interger using iteration via while loop
  */
 
-// int collatz (int x);
+int collatz_iter (int x);
+
+// ------------
+// collatz_recur
+// ------------
+
+/**
+ * @param x the number you desired to get the collatz of
+ * @param y startcycle
+ * @return the cycle of the input interger via recursion
+ */
+
+int collatz_recur (int x, int y);
 
 // -------------
 // collatz_print

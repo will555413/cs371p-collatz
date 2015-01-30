@@ -22,9 +22,16 @@
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
 
-#include "Collatz.h"
-
 using namespace std;
+
+// ----
+// declare methods
+// ----
+
+pair<int, int> collatz_read (const string& s);
+int collatz_eval (int i, int j);
+void collatz_print (ostream& w, int i, int j, int v);
+void collatz_solve (istream& r, ostream& w);
 
 // ----
 // main
@@ -52,8 +59,8 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
     // assert: input validity check
-    assert (i>0 && i<1000000);
-    assert (j>0 && j<1000000);
+    assert (i>0 && i<=1000000);
+    assert (j>0 && j<=1000000);
 
     int highest = 0, start, end;
     if(i<j)
@@ -67,7 +74,7 @@ int collatz_eval (int i, int j) {
         end = i;
     }
     
-    for(; start<end; start++)
+    for(; start<=end; start++)
     {
         // int iter = collatz(start);
         int temp = start, cycle = 1;
