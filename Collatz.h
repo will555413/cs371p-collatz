@@ -56,11 +56,10 @@ int collatz_iter (int x);
 
 /**
  * @param x the number you desired to get the collatz of
- * @param y startcycle
  * @return the cycle of the input interger via recursion
  */
 
-int collatz_recur (int x, int y);
+int collatz_recur (int x);
 
 // -------------
 // collatz_print
