@@ -19,7 +19,7 @@
 using namespace std;
 
 // global array that acts like a cache to store the calculated collatz value
-int* cache = new int[3000001];
+int cache [3000001] = {};
 
 
 // ------------
@@ -39,19 +39,24 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
     // assert: input validity check
-    assert (i>=0 && i<=1000000);
-    assert (j>=0 && j<=1000000);
+    assert (i>0 && i<=1000000);
+    assert (j>0 && j<=1000000);
 
     // Input sorting: compare the inputs and set the larger on as end and the smaller one as start.
-    int highest = 0, start, end;
-    if(i<j)
+    int highest = 0, start = 0, end = 0;
+    if(i==j)
     {
-        start = (int)i;
+        start = i;
+        end = i;
+    }
+    else if(i<j)
+    {
+        start = (j/2+1>i) ? j/2+1 : i;
         end = j;
     }
     else
     {
-        start = (int)j;
+        start = (i/2+1>j) ? i/2+1 : j;
         end = i;
     }
     cache[1] = 1;
@@ -59,13 +64,14 @@ int collatz_eval (int i, int j) {
     // iterate through all numbers between start and end
     for(; start<=end; start++)
     {
-        int temp = start;
-        int cycle = collatz_iter(temp);
+        int cycle = 0;
+        cycle = collatz_iter(start);
 
         if(start < 3000001 && cache[start] != 0)
         {
             cache[start] = cycle;
         }
+        // cout<<"cycle of "<<start<<" = "<<cycle<<endl;
         if(highest<cycle)
             highest = cycle;
     }
@@ -79,9 +85,10 @@ int collatz_eval (int i, int j) {
 // collatz_iter
 // ------------
 
-int collatz_iter (int x)
+int collatz_iter (int i)
 {
     int cycle = 0;
+    unsigned int x = i;
     while(x>0)
     {
         if(x < 3000001)
@@ -89,12 +96,12 @@ int collatz_iter (int x)
             if(cache[x]!=0)
             {
                 cycle += cache[x];
-                break;
+                return cycle;
             }
         }
         if(x & 1)
         {
-            x += (x >> 1) + 1;
+            x += (x >> 1) + 1;    
             cycle += 2;
         }
         else
@@ -102,6 +109,7 @@ int collatz_iter (int x)
             x = x >> 1;
             cycle++;
         }
+
     }
     return cycle;
 }
@@ -110,7 +118,7 @@ int collatz_iter (int x)
 // collatz_recur
 // ------------
 
-int collatz_recur (int x)
+int collatz_recur (unsigned int x)
 {
     if(x == 0)
     {

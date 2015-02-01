@@ -55,26 +55,42 @@ TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
 
+TEST(Collatz, eval_5) {
+    const int v = collatz_eval(1, 1000000);
+    ASSERT_EQ(525, v);}
+
+TEST(Collatz, eval_6) {
+    const int v = collatz_eval(1, 1);
+    ASSERT_EQ(1, v);}
+
+TEST(Collatz, eval_7) {
+    const int v = collatz_eval(200, 200);
+    ASSERT_EQ(27, v);}
+
+TEST(Collatz, eval_8) {
+    const int v = collatz_eval(5000, 2);
+    ASSERT_EQ(238, v);}
+
 // -----
 // print
 // -----
 
-TEST(Collatz, print1) {
+TEST(Collatz, print_1) {
     ostringstream w;
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
 
-TEST(Collatz, print2) {
+TEST(Collatz, print_2) {
     ostringstream w;
     collatz_print(w, 100, 200, 125);
     ASSERT_EQ("100 200 125\n", w.str());}
 
-TEST(Collatz, print3) {
+TEST(Collatz, print_3) {
     ostringstream w;
     collatz_print(w, 201, 210, 89);
     ASSERT_EQ("201 210 89\n", w.str());}
 
-TEST(Collatz, print4) {
+TEST(Collatz, print_4) {
     ostringstream w;
     collatz_print(w, 900, 1000, 174);
     ASSERT_EQ("900 1000 174\n", w.str());}
@@ -83,17 +99,17 @@ TEST(Collatz, print4) {
 // solve
 // -----
 
-TEST(Collatz, solve) {
+TEST(Collatz, solve_1) {
     istringstream r("1 10\n100 200\n201 210\n900 1000\n");
     ostringstream w;
     collatz_solve(r, w);
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
 
-TEST(Collatz, solve) {
+TEST(Collatz, solve_2) {
     istringstream r("1 1000000\n1 1\n200 200\n5000 2\n");
     ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 1000000 525\n1 1\n200 200\n5000 2\n", w.str());}
+    ASSERT_EQ("1 1000000 525\n1 1 1\n200 200 27\n5000 2 238\n", w.str());}
 
 /*
 % ls -al /usr/include/gtest/

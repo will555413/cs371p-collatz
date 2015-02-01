@@ -13,17 +13,17 @@ RunCollatz: Collatz.h Collatz.c++ RunCollatz.c++
 	g++-4.8 -pedantic -std=c++11 -Wall Collatz.c++ RunCollatz.c++ -o RunCollatz
 
 RunCollatz.out: RunCollatz RunCollatz.in
-	RunCollatz < RunCollatz.in > RunCollatz.out
+	./RunCollatz < RunCollatz.in > RunCollatz.out
 
 RunCollatz.tmp: RunCollatz RunCollatz.in
-	RunCollatz < RunCollatz.in > RunCollatz.tmp
+	./RunCollatz < RunCollatz.in > RunCollatz.tmp
 	diff RunCollatz.tmp RunCollatz.out
 
 TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
 	g++-4.8 -fprofile-arcs -ftest-coverage -pedantic -std=c++11 -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lgtest_main -lpthread
 
 TestCollatz.out: TestCollatz
-	valgrind TestCollatz        >  TestCollatz.out 2>&1
+	valgrind ./TestCollatz        >  TestCollatz.out 2>&1
 	gcov-4.8 -b Collatz.c++     >> TestCollatz.out
 	gcov-4.8 -b TestCollatz.c++ >> TestCollatz.out
 
