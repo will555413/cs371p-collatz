@@ -1,3 +1,202 @@
+commit bc01a8a52c33c5ba9530af8a60cd7459d9fe2a66
+Merge: 62b672c c0835d5
+Author: William <will555413>
+Date:   Sun Feb 1 15:02:10 2015 -0600
+
+    Merge branch 'master' of https://github.com/will555413/cs371p-collatz
+
+commit 62b672ceeb9b974c29dbad3cdf00cf9dc5831ef1
+Author: William <will555413>
+Date:   Sun Feb 1 15:01:31 2015 -0600
+
+    final turnin V2 (with gitignore)
+
+commit c0835d587de8555d99d797b7fe4666c2f041a1f9
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:01:03 2015 -0600
+
+    Delete gitignore.txt
+
+commit 450ce7f17bb5cc82b9f1e7d81190954f797096c9
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:00:50 2015 -0600
+
+    Delete type_traits.h.gcov
+
+commit a74a6149d53a28b0c30889cc680ae3db46d3a669
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:00:45 2015 -0600
+
+    Delete stl_pair.h.gcov
+
+commit 1223d8107b5cb58e567f32d3483be494bb2b4b2d
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:00:40 2015 -0600
+
+    Delete stl_iterator_base_types.h.gcov
+
+commit 14819936dcdc2220e6f415ec05dac5ea4583bec0
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:00:34 2015 -0600
+
+    Delete sstream.gcov
+
+commit d01b79f6f282c0a0afd4507d3f6270679be6c588
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:00:27 2015 -0600
+
+    Delete stl_iterator_base_funcs.h.gcov
+
+commit 52fc5c2f7dbcf5ef44d3b193f3f6621964d771a6
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:00:20 2015 -0600
+
+    Delete new_allocator.h.gcov
+
+commit b476edf8a8d845f04579fe336dc3da6f6552a19c
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:00:13 2015 -0600
+
+    Delete move.h.gcov
+
+commit e987d81d0c2c0ae230dfcf659b68b251d7ba8975
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 15:00:04 2015 -0600
+
+    Delete locale_facets.h.gcov
+
+commit b7bdd0f6cb341586bb69f74dd3cd1058531cc30e
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:58:22 2015 -0600
+
+    Delete iostream.gcov
+
+commit 1901b8329c19c1190e55a81fe6ff6088f65aea64
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:58:13 2015 -0600
+
+    Delete ios_base.h.gcov
+
+commit 3af867fcdefd81c505dc7e8d43bf3059b4099c91
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:58:02 2015 -0600
+
+    Delete iomanip.gcov
+
+commit 000e286c3482c2ff71b856709a4269d6469a85ae
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:57:54 2015 -0600
+
+    Delete gtest.h.gcov
+
+commit 9c5a9dee1d4c5d0ed869adb4443a0a3a5c3be161
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:57:43 2015 -0600
+
+    Delete gthr-default.h.gcov
+
+commit e496bef7555766a63f001ee7affc0b1eec558024
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:57:34 2015 -0600
+
+    Delete gtest-string.h.gcov
+
+commit b18ed7d614fd541e763ec5580bceffc8fecebf3b
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:57:26 2015 -0600
+
+    Delete gtest-printers.h.gcov
+
+commit 1f10dff7f596ce20d64ce06445d308f61c77a155
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:57:18 2015 -0600
+
+    Delete gtest-port.h.gcov
+
+commit d0a9373e5bc93696bac7cc0fe17ee8fdae186998
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:57:09 2015 -0600
+
+    Delete gtest-message.h.gcov
+
+commit 78076720d94e9a13cf6021f1faf92bc0f1123116
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:56:59 2015 -0600
+
+    Delete char_traits.h.gcov
+
+commit 844f7c29a762f6bdfa8e568fe39c7cc13aecdda7
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:56:45 2015 -0600
+
+    Delete basic_string.tcc.gcov
+
+commit 3e06af7e196b85bd4ff80c2e7827acc4163c2ca0
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:56:33 2015 -0600
+
+    Delete basic_string.h.gcov
+
+commit 28aadf43ce3cb11e799d2e4a9f4fad23b0fc5a08
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:56:23 2015 -0600
+
+    Delete gtest-internal.h.gcov
+
+commit 600674c1b3c8445a95991ecf4f844a477b530565
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:56:13 2015 -0600
+
+    Delete atomicity.h.gcov
+
+commit 66b25e7120f22deff2b62feba63b48e49ec64a9b
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:55:49 2015 -0600
+
+    Delete allocator.h.gcov
+
+commit 644765501511a8ac3fab2ef47d9bc8da1da0c44b
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:54:31 2015 -0600
+
+    Delete TestCollatz.gcno
+
+commit c0dedf80c6499a20fc8f76c5584309e465ecbe9e
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:54:23 2015 -0600
+
+    Delete TestCollatz.gcda
+
+commit dc453b0dbf8099dcfe93ec42d7e2ad5cdfc168c1
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:54:14 2015 -0600
+
+    Delete TestCollatz.c++.gcov
+
+commit 43dfaef933b0a7d89e47b2bf4399f1f30f2153ac
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:53:56 2015 -0600
+
+    Delete Collatz.gcno
+
+commit 1dce0cb28433a3e017c9e1bacb61bcf7afd50cb5
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:53:50 2015 -0600
+
+    Delete Collatz.gcda
+
+commit 47e826f94147139c95220a0f080f8e599b0bcb1d
+Author: will555413 <will555413@yahoo.com.tw>
+Date:   Sun Feb 1 14:53:44 2015 -0600
+
+    Delete Collatz.c++.gcov
+
+commit 002b53e4b768e082cd6fc14d91a8d73af70fb5b7
+Author: William <will555413>
+Date:   Sun Feb 1 14:51:43 2015 -0600
+
+    final turnin V2 (with gitignore)
+
 commit 35d08af98f9fc1f05938d629f669230b57e585fb
 Author: William <will555413>
 Date:   Sun Feb 1 14:48:24 2015 -0600
