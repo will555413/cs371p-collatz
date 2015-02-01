@@ -58,13 +58,13 @@ call    2 never executed
 function _Z12collatz_evalii called 16 returned 100% blocks executed 88%
        16:   40:int collatz_eval (int i, int j) {
         -:   41:    // assert: input validity check
-       16:   42:    assert (i>0 && i<=1000000);
+       16:   42:    assert (i>0 && i<1000000);
 branch  0 taken 100% (fallthrough)
 branch  1 taken 0%
 branch  2 taken 0% (fallthrough)
 branch  3 taken 100%
 call    4 never executed
-       16:   43:    assert (j>0 && j<=1000000);
+       16:   43:    assert (j>0 && j<1000000);
 branch  0 taken 100% (fallthrough)
 branch  1 taken 0%
 branch  2 taken 0% (fallthrough)
@@ -115,7 +115,7 @@ branch  3 taken 99%
   1005436:   75:        if(highest<cycle)
 branch  0 taken 1% (fallthrough)
 branch  1 taken 99%
-       72:   76:            highest = cycle;
+       70:   76:            highest = cycle;
         -:   77:    }
         -:   78:    // assert: output validity check
        16:   79:    assert (highest>0);
@@ -135,15 +135,15 @@ function _Z12collatz_iteri called 1005436 returned 100% blocks executed 90%
         -:   89:{
   1005436:   90:    int cycle = 0;
   1005436:   91:    unsigned int x = i;
- 94918694:   92:    while(x>0)
+ 94918692:   92:    while(x>0)
 branch  0 taken 100%
 branch  1 taken 0% (fallthrough)
         -:   93:    {
- 93913258:   94:        if(x < 3000001)
+ 93913256:   94:        if(x < 3000001)
 branch  0 taken 98% (fallthrough)
 branch  1 taken 2%
         -:   95:        {
- 92087922:   96:            if(cache[x]!=0)
+ 92087920:   96:            if(cache[x]!=0)
 branch  0 taken 1% (fallthrough)
 branch  1 taken 99%
         -:   97:            {
@@ -151,7 +151,7 @@ branch  1 taken 99%
   1005436:   99:                return cycle;
         -:  100:            }
         -:  101:        }
- 92907822:  102:        if(x & 1)
+ 92907820:  102:        if(x & 1)
 branch  0 taken 50% (fallthrough)
 branch  1 taken 50%
         -:  103:        {
@@ -160,8 +160,8 @@ branch  1 taken 50%
         -:  106:        }
         -:  107:        else
         -:  108:        {
- 46765124:  109:            x = x >> 1;
- 46765124:  110:            cycle++;
+ 46765122:  109:            x = x >> 1;
+ 46765122:  110:            cycle++;
         -:  111:        }
         -:  112:
         -:  113:    }

@@ -332,7 +332,7 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:   59:    const int v = collatz_eval(1, 1000000);
+        1:   59:    const int v = collatz_eval(1, 999999);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -853,7 +853,7 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:  109:    istringstream r("1 1000000\n1 1\n200 200\n5000 2\n");
+        1:  109:    istringstream r("1 999999\n1 1\n200 200\n5000 2\n");
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
@@ -879,7 +879,7 @@ branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
 function _GLOBAL__sub_I__ZN17Collatz_read_Test10test_info_E called 1 returned 100% blocks executed 100%
 function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 100%
-        5:  112:    ASSERT_EQ("1 1000000 525\n1 1 1\n200 200 27\n5000 2 238\n", w.str());}
+        5:  112:    ASSERT_EQ("1 999999 525\n1 1 1\n200 200 27\n5000 2 238\n", w.str());}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0%

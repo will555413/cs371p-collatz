@@ -1322,7 +1322,7 @@ function _ZN7testing4Test5SetupEv called 0 returned 0% blocks executed 0%
         -: 1303://
         -: 1304:// INTERNAL IMPLEMENTATION - DO NOT USE IN A USER PROGRAM.
         -: 1305:template <typename T1, typename T2>
-function _ZN7testing8internal33FormatForComparisonFailureMessageISsA43_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
+function _ZN7testing8internal33FormatForComparisonFailureMessageISsA42_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
 function _ZN7testing8internal33FormatForComparisonFailureMessageISsA45_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
 function _ZN7testing8internal33FormatForComparisonFailureMessageISsA14_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
 function _ZN7testing8internal33FormatForComparisonFailureMessageISsA12_cEENS0_6StringERKT_RKT0_ called 0 returned 0% blocks executed 0%
@@ -1380,7 +1380,7 @@ call   41 never executed
         -: 1312:
         -: 1313:// The helper function for {ASSERT|EXPECT}_EQ.
         -: 1314:template <typename T1, typename T2>
-function _ZN7testing8internal11CmpHelperEQIA43_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 36%
+function _ZN7testing8internal11CmpHelperEQIA42_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 36%
 function _ZN7testing8internal11CmpHelperEQIA45_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 36%
 function _ZN7testing8internal11CmpHelperEQIA14_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 36%
 function _ZN7testing8internal11CmpHelperEQIA12_cSsEENS_15AssertionResultEPKcS5_RKT_RKT0_ called 1 returned 100% blocks executed 36%
@@ -1533,7 +1533,7 @@ call   76 never executed
         -: 1354: public:
         -: 1355:  // This templatized version is for the general case.
         -: 1356:  template <typename T1, typename T2>
-function _ZN7testing8internal8EqHelperILb0EE7CompareIA43_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%
+function _ZN7testing8internal8EqHelperILb0EE7CompareIA42_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%
 function _ZN7testing8internal8EqHelperILb0EE7CompareIA45_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%
 function _ZN7testing8internal8EqHelperILb0EE7CompareIA14_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%
 function _ZN7testing8internal8EqHelperILb0EE7CompareIA12_cSsEENS_15AssertionResultEPKcS7_RKT_RKT0_ called 1 returned 100% blocks executed 100%

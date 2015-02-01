@@ -16,31 +16,18 @@
 // includes
 // --------
 
-#include <iostream> // cin, cout, endl, istream, ostream
+#include <iostream> // cin, cout
 #include <cassert>  // assert
+#include <iostream> // endl, istream, ostream
 #include <sstream>  // istringstream
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
 
 using namespace std;
 
-// ----
-// declare methods
-// ----
+// global array that acts like a cache to store the calculated collatz value
+int cache [3000001] = {};
 
-pair<int, int> collatz_read (const string& s);
-int collatz_eval (int i, int j);
-void collatz_print (ostream& w, int i, int j, int v);
-void collatz_solve (istream& r, ostream& w);
-
-// ----
-// main
-// ----
-
-int main () {
-    using namespace std;
-    collatz_solve(cin, cout);
-    return 0;}
 
 // ------------
 // collatz_read
@@ -54,6 +41,39 @@ pair<int, int> collatz_read (const string& s) {
     return make_pair(i, j);}
 
 // ------------
+// collatz_iter
+// ------------
+
+int collatz_iter (int i)
+{
+    int cycle = 0;
+    unsigned int x = i;
+    while(x>0)
+    {
+        if(x < 3000001)
+        {
+            if(cache[x]!=0)
+            {
+                cycle += cache[x];
+                return cycle;
+            }
+        }
+        if(x & 1)
+        {
+            x += (x >> 1) + 1;    
+            cycle += 2;
+        }
+        else
+        {
+            x = x >> 1;
+            cycle++;
+        }
+
+    }
+    return cycle;
+}
+
+// ------------
 // collatz_eval
 // ------------
 
@@ -62,30 +82,36 @@ int collatz_eval (int i, int j) {
     assert (i>0 && i<=1000000);
     assert (j>0 && j<=1000000);
 
-    int highest = 0, start, end;
-    if(i<j)
+    // Input sorting: compare the inputs and set the larger on as end and the smaller one as start.
+    int highest = 0, start = 0, end = 0;
+    if(i==j)
     {
         start = i;
+        end = i;
+    }
+    else if(i<j)
+    {
+        start = (j/2+1>i) ? j/2+1 : i;
         end = j;
     }
     else
     {
-        start = j;
+        start = (i/2+1>j) ? i/2+1 : j;
         end = i;
     }
+    cache[1] = 1;
     
+    // iterate through all numbers between start and end
     for(; start<=end; start++)
     {
-        // int iter = collatz(start);
-        int temp = start, cycle = 1;
-        while(temp!=1)
+        int cycle = 0;
+        cycle = collatz_iter(start);
+
+        if(start < 3000001 && cache[start] != 0)
         {
-            if(temp % 2 == 1)
-                temp = (temp*3+1);
-            else
-                temp = temp/2;
-            cycle++;
+            cache[start] = cycle;
         }
+        // cout<<"cycle of "<<start<<" = "<<cycle<<endl;
         if(highest<cycle)
             highest = cycle;
     }
@@ -113,3 +139,12 @@ void collatz_solve (istream& r, ostream& w) {
         const int            j = p.second;
         const int            v = collatz_eval(i, j);
         collatz_print(w, i, j, v);}}
+
+// ----
+// main
+// ----
+
+int main () {
+    using namespace std;
+    collatz_solve(cin, cout);
+    return 0;}

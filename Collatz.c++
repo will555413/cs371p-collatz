@@ -39,8 +39,8 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
     // assert: input validity check
-    assert (i>0 && i<=1000000);
-    assert (j>0 && j<=1000000);
+    assert (i>0 && i<1000000);
+    assert (j>0 && j<1000000);
 
     // Input sorting: compare the inputs and set the larger on as end and the smaller one as start.
     int highest = 0, start = 0, end = 0;
