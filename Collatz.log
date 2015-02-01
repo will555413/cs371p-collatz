@@ -1,0 +1,53 @@
+commit 35d08af98f9fc1f05938d629f669230b57e585fb
+Author: William <will555413>
+Date:   Sun Feb 1 14:48:24 2015 -0600
+
+    final turnin
+
+commit 8778a241626476018802133fecdb3cae1ac908e2
+Author: William <will555413>
+Date:   Sun Feb 1 13:55:45 2015 -0600
+
+    TestCollatz.out working properly
+
+commit d4e4a6f1257d0d0e8eb61e2b4c6e8dc8733e5bb9
+Author: William <will555413>
+Date:   Fri Jan 30 18:54:35 2015 -0600
+
+    iterative solution final
+
+commit b1a97fa1d985041a1a997e1738f56314a92156f8
+Author: William <will555413>
+Date:   Fri Jan 30 15:10:36 2015 -0600
+
+    iterative solution works to 1 mil
+
+commit bd3c83a5f22a24a1d894fb8090a434ba6aa98d8c
+Author: William <will555413>
+Date:   Thu Jan 29 16:32:02 2015 -0600
+
+    SphereCollatz.c++ added (with simple solution)
+
+commit a9a50ad5fc75c242e7bfab3d5ca1b488f5188f87
+Author: William <will555413>
+Date:   Thu Jan 29 16:24:37 2015 -0600
+
+    simplest solution(no cache)
+
+commit 6718009d6cd2ea39230c8d2ce72f379348aea312
+Author: William <will555413>
+Date:   Thu Jan 29 15:01:04 2015 -0600
+
+    confirmed expected failures
+
+commit 1545e836ce72d72be7ddd591d2e1212df3cf46ee
+Author: William <will555413>
+Date:   Thu Jan 29 14:59:57 2015 -0600
+
+    confirmed expected success
+
+commit f0382cec1584a2c08cde684bd749d1a54e27ec69
+Author: William <will555413>
+Date:   Thu Jan 29 13:27:53 2015 -0600
+
+    base code
