@@ -114,54 +114,6 @@ int collatz_iter (int i)
     return cycle;
 }
 
-// ------------
-// collatz_recur
-// ------------
-
-int collatz_recur (unsigned int x)
-{
-    if(x == 0)
-    {
-        // cout << "case [0]: return 0" << endl;
-        return 0;
-    }
-    else if(x < 3000001)
-    {
-        if(cache[x]!=0)
-        {
-            // cout << "case [cache found]: return cache["<< x << "]" << endl;
-            return cache[x];
-        }
-        else if(x == 1)
-        {
-            // cout << "case [x<arr & x=1]: return 1" << endl;
-            return 1;
-        }
-        else if(x & 1)
-        {
-            // cout << "case [x="<< x <<"<length]: recurr odd case" << endl;
-            return cache[x] = 1+collatz_recur(x*3+1);
-        }
-        else
-        {
-            // cout << "case [x="<< x <<"<length]: recurr even case" << endl;
-            return cache[x] = 1+collatz_recur(x/2);
-        }
-    }
-    else if(x & 1)
-    {
-        // cache[x] = 1+collatz(x*3+1);
-        // cout << "case [x="<< x <<">length]: recurr odd case" << endl;
-        return 1+collatz_recur(x*3+1);
-    }
-    else
-    {
-        // cache[x] = 1+collatz(x/2);
-        // cout << "case [x="<< x <<">length]: recurr even case" << endl;
-        return 1+collatz_recur(x/2);
-    }
-}
-
 // -------------
 // collatz_print
 // -------------

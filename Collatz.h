@@ -50,17 +50,6 @@ int collatz_eval (int i, int j);
 
 int collatz_iter (int x);
 
-// ------------
-// collatz_recur
-// ------------
-
-/**
- * @param x the number you desired to get the collatz of
- * @return the cycle of the input interger via recursion
- */
-
-int collatz_recur (int x);
-
 // -------------
 // collatz_print
 // -------------
